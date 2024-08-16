@@ -15,7 +15,10 @@ const Header = () => {
         <p className="rate">
           <span className="dollar">$</span> 1000
         </p>
-        <p>by referring fellow MSPs.</p>
+        <p className="sub-text">by referring fellow MSPs.</p>
+
+        <img src="handShake.svg" className="handshake" />
+        <img src="coin.svg" className="coin" />
       </div>
 
       <p className="header-sub">
@@ -23,7 +26,7 @@ const Header = () => {
         voucher.
       </p>
 
-      <button >
+      <button>
         REFER A FRIEND <RiArrowDropDownLine className="arrow-right" />
       </button>
     </div>

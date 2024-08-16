@@ -1,10 +1,12 @@
 .freq-container {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .title-div {
-  width: 376px;
+  max-width: 376px;
 }
 
 .freq-title {
@@ -20,4 +22,25 @@ sub {
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+
+@media screen and (max-width: 1180px) {
+  .freq-title {
+    text-align: center;
+  }
+
+  .title-div {
+    min-width: 90%;
+  }
+
+  .sub {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 376px) {
+  .freq-title {
+    text-align: center;
+    font-size: 26px;
+  }
 }

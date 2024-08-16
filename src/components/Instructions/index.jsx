@@ -28,7 +28,7 @@ const Instructions = () => {
       <div className="inst-title-div">
         <p className="inst-title">How does it work?</p>
       </div>
-      <img className="arrow-img" src="" alt="arrow-img" />
+      <img className="arrow-img" src="arrow.svg" alt="arrow-img" />
 
       {instructionsDetails.map((item) => {
         return (
@@ -41,8 +41,6 @@ const Instructions = () => {
           />
         );
       })}
-
-      
     </div>
   );
 };

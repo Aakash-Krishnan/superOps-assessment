@@ -4,14 +4,26 @@
   background-color: #ffffff;
   display: flex;
   align-items: center;
+  justify-content: center;
   height: 100px;
   padding: 0 100px;
   z-index: 999;
+  width: 100%;
+}
+
+.sidebar {
+  display: none;
+}
+
+.logo-sm {
+  display: none;
 }
 
 nav {
   display: flex;
+  align-items: center;
   justify-content: space-between;
+  gap: 20px;
   padding: 0 10%;
   cursor: pointer;
   width: 100%;
@@ -59,4 +71,76 @@ button {
 .arrow-right {
   transform: rotate(-90deg);
   font-size: 18px;
+}
+
+@media screen and (min-width: 1245px) {
+  .burger-icon {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  ul,
+  .nav-right {
+    display: none;
+  }
+
+  .burger-icon {
+    display: block;
+    z-index: 999;
+    position: relative;
+    font-size: 24px;
+  }
+  .sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: #ffffff;
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sidebar-header {
+    width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    display: flex;
+    padding: 20px 20px 10px 20px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .sidebar-list {
+    display: block;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    text-align: left;
+    padding: 20px;
+  }
+
+  .sidebar-list li {
+    margin-bottom: 10px;
+  }
+
+  .cancel {
+    font-weight: 700;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .logo-lr {
+    display: none;
+  }
+
+  .logo-sm {
+    display: block;
+  }
+  .nav-container {
+    padding: 0 20px;
+  }
 }
