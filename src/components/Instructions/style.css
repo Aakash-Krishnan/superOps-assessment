@@ -1,0 +1,22 @@
+.inst-container {
+  display: flex;
+  width: fit-content;
+  gap: 14px;
+  position: relative;
+  top: -150px;
+}
+
+.inst-title-div {
+  width: 207px;
+  text-align: left;
+}
+
+.inst-title {
+  font-weight: 800;
+  font-size: 32px;
+}
+
+.arrow-img {
+  position: relative;
+  top: 20px;
+}

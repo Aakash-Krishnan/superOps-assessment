@@ -1,0 +1,43 @@
+.card-container {
+  width: 276px;
+  min-height: 342px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 20px 40px -8px #2432421a;
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.inst-no {
+  position: relative;
+}
+
+.color-pallet {
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  position: absolute;
+  top: 0;
+  z-index: 0;
+}
+
+.item-no {
+  font-weight: 700;
+  font-size: 48px;
+  background: transparent;
+  z-index: 1;
+  position: relative;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.desc {
+  font-size: 16px;
+  color: #666666;
+}

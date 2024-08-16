@@ -1,0 +1,78 @@
+.header-container {
+  min-width: 1328px;
+  max-width: 1328px;
+  height: 949px;
+  background: #ffc2c8;
+  border-radius: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 48px;
+  gap: 50px;
+}
+
+.refer-text {
+  color: #ff0055;
+  font-size: 14px;
+}
+
+.header-title {
+  font-weight: 800;
+  font-size: 56px;
+  line-height: 72px;
+  width: 777px;
+  text-align: center;
+}
+
+.referral-card {
+  width: 376px;
+  height: 195px;
+  background: #ffffff;
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  font-weight: 500;
+  padding: 20px;
+}
+
+.rate {
+  position: relative;
+  padding: 0;
+  color: #ff0055;
+  font-size: 70px;
+}
+
+.dollar {
+  padding: 0;
+  margin: 0;
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.rate {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  right: 10px;
+}
+
+.header-sub {
+  width: 374px;
+  text-align: center;
+  color: #4d4d4d;
+}
+
+button {
+  background-color: #170426;
+  color: #ffffff;
+  padding: 16px 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  place-items: center;
+  border-radius: 5px;
+}
+

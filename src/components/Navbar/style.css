@@ -1,0 +1,62 @@
+.nav-container {
+  position: sticky;
+  top: 0;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  height: 100px;
+  padding: 0 100px;
+  z-index: 999;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10%;
+  cursor: pointer;
+  width: 100%;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  font-size: 13px;
+}
+
+.nav-left,
+ul {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.nav-right {
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  display: flex;
+  align-items: center;
+  padding: 6px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.sign-in-btn {
+  background-color: #ffffff;
+  color: #000000;
+  border: 1px solid #000000;
+}
+
+.started-btn {
+  background-color: #170426;
+  color: #ffffff;
+}
+
+.arrow-right {
+  transform: rotate(-90deg);
+  font-size: 18px;
+}
