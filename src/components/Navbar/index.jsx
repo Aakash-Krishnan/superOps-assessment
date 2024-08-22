@@ -72,10 +72,14 @@ const Navbar = () => {
           </div>
 
           <div className="nav-right">
-            <button className="sign-in-btn">SIGN IN</button>
-            <button className="started-btn" onClick={handleModal}>
-              GET STARTED FOR FREE
-            </button>
+            <div>
+              <button className="sign-in-btn">SIGN IN</button>
+            </div>
+            <div className="btn-wrapper">
+              <button className="started-btn" onClick={handleModal}>
+                GET STARTED FOR FREE
+              </button>
+            </div>
           </div>
 
           <GiHamburgerMenu
