@@ -44,6 +44,11 @@ const questions = [
       "An MSP sales/marketing coach",
       "Anyone who works with MSPs",
     ],
+    style: (
+      <>
+        <h1>Hello</h1>
+      </>
+    ),
   },
 ];
 
@@ -67,6 +72,7 @@ const FrequentQuestions = () => {
                 points={question.points}
                 visibility={() => setIsVisible(idx)}
                 isVisible={isVisible === idx ? true : false}
+                style={question.style}
               />
             </div>
           );

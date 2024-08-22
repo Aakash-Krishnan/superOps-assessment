@@ -3,7 +3,14 @@ import "./style.css";
 
 import { RiArrowDropDownLine } from "react-icons/ri";
 
-const Dropdown = ({ title, subTitle, points, visibility, isVisible }) => {
+const Dropdown = ({
+  title,
+  subTitle,
+  points,
+  visibility,
+  isVisible,
+  style,
+}) => {
   return (
     <div
       onClick={visibility}
@@ -25,8 +32,8 @@ const Dropdown = ({ title, subTitle, points, visibility, isVisible }) => {
           <ul className="points">
             {points?.map((item) => {
               return (
-                <li className="point-li" key={title}>
-                  {item}
+                <li className="point-li" key={title} >
+                  {style}
                 </li>
               );
             })}

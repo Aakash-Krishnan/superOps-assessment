@@ -3,6 +3,7 @@ import "./style.css";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { useState } from "react";
+import Modal from "../modal";
 
 // const sidebarStyles = {
 //   position: "fixed",
@@ -44,59 +45,67 @@ const navList = [
 
 const Navbar = () => {
   const [sidebar, setSidebar] = useState(false);
+  const [modal, setModal] = useState(false);
 
-  console.log(sidebar);
+  const handleModal = (value) => {
+    setModal(value);
+  };
 
   return (
-    <div className="nav-container">
-      <nav>
-        <div className="nav-left">
-          <img src="SuperOps-logo.svg" alt="logo" className="logo-lr" />
-          {!sidebar && <img src="logo-sm.svg" alt="logo" className="logo-sm" />}
-          <ul>
-            {navList.map((item) => {
-              return (
-                <li className="list" key={item.title}>
-                  {item.title} {item.dropDown && <RiArrowDropDownLine />}
-                </li>
-              );
-            })}
-          </ul>
-        </div>
-
-        <div className="nav-right">
-          <button className="sign-in-btn">SIGN IN</button>
-          <button className="started-btn">
-            GET STARTED FOR FREE <RiArrowDropDownLine className="arrow-right" />
-          </button>
-        </div>
-
-        <GiHamburgerMenu
-          className="burger-icon"
-          onClick={() => setSidebar(true)}
-        />
-      </nav>
-
-      {sidebar && (
-        <div className="sidebar">
-          <div className="sidebar-header">
-            <img src="logo-sm.svg" alt="logo" className="logo-sm" />
-            <p className="cancel" onClick={() => setSidebar(false)}>
-              X
-            </p>
+    <div style={{ margin: "0px", padding: "0px" }}>
+      <div className="nav-container">
+        <nav>
+          <div className="nav-left">
+            <img src="SuperOps-logo.svg" alt="logo" className="logo-lr" />
+            {!sidebar && (
+              <img src="logo-sm.svg" alt="logo" className="logo-sm" />
+            )}
+            <ul>
+              {navList.map((item) => {
+                return (
+                  <li className="list" key={item.title}>
+                    {item.title} {item.dropDown && <RiArrowDropDownLine />}
+                  </li>
+                );
+              })}
+            </ul>
           </div>
 
-          <ul className="sidebar-list">
-            {navList.map((item) => {
-              return (
-                <li key={item.title}>
-                  {item.title} {item.dropDown && <RiArrowDropDownLine />}
-                </li>
-              );
-            })}
-          </ul>
-        </div>
-      )}
+          <div className="nav-right">
+            <button className="sign-in-btn">SIGN IN</button>
+            <button className="started-btn" onClick={handleModal}>
+              GET STARTED FOR FREE
+            </button>
+          </div>
+
+          <GiHamburgerMenu
+            className="burger-icon"
+            onClick={() => setSidebar(true)}
+          />
+        </nav>
+
+        {sidebar && (
+          <div className="sidebar">
+            <div className="sidebar-header">
+              <img src="logo-sm.svg" alt="logo" className="logo-sm" />
+              <p className="cancel" onClick={() => setSidebar(false)}>
+                X
+              </p>
+            </div>
+
+            <ul className="sidebar-list">
+              {navList.map((item) => {
+                return (
+                  <li key={item.title}>
+                    {item.title} {item.dropDown && <RiArrowDropDownLine />}
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+        )}
+      </div>
+      {modal && <Modal onClose={handleModal} modal={modal} />}
     </div>
   );
 };
